@@ -3,7 +3,7 @@ var orientation = {
     "alpha": 0,
     "beta": 90,
     "gamma": -90
-}
+};
 
 if (window.DeviceOrientationEvent) {
     // Our browser supports DeviceOrientation
@@ -20,5 +20,6 @@ function deviceOrientationListener(event) {
     orientation.alpha = event.alpha;
     orientation.beta = event.beta;
     orientation.gamma = event.gamma;
-    console.log(`Device Orientation: ${orientation}`)
+    console.log(`Device Orientation`);
+    console.log(orientation);
 }
