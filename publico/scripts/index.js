@@ -1,4 +1,4 @@
-const photo3d = document.getElementById("3dphoto")
+const photo3d = document.getElementById("photo3d")
 
 if (window.DeviceOrientationEvent) {
     // Our browser supports DeviceOrientation
