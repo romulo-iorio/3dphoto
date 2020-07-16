@@ -20,7 +20,7 @@ function deviceOrientationListener(event) {
     console.log(`alpha: ${event.alpha}`);
     console.log(`beta: ${event.beta}`);
     console.log(`gamma: ${event.gamma}`);
-    alphaValue.innerText = event.alpha;
-    betaValue.innerText = event.beta;
-    gammaValue.innerText = event.gamma;    
+    alphaValue.innerText = Math.round(event.alpha);
+    betaValue.innerText = Math.round(event.beta);
+    gammaValue.innerText = Math.round(event.gamma);    
 }
