@@ -14,7 +14,7 @@
     height: 100vh;
 }
 
-#panorama img {
+#panorama img#3dphoto {
     position: relative;
     bottom: 750px;
     right:  1500px;
