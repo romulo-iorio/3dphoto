@@ -43,7 +43,7 @@ routes.use(bodyParser.json()); // let's make JSON work too!
 
 //Configuração de rotas
 routes.get('/', (req, res) => {
-    return res.render(path.resolve(__dirname + '/../publico/views/index.html'));
+    return res.sendFile(path.resolve(__dirname + '/../publico/views/index.html'));
 });
 
 routes.get('/manifest.json',(req, res) =>{
