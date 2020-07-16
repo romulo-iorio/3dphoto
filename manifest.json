@@ -1,0 +1,25 @@
+{
+    "short_name": "3dphoto",
+    "name": "3dphoto: testing 3d photo",
+    "description": "App to 3d photo",
+    "icons": [
+        {
+            "src": "/img/chat192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/img/chat512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "#049dd9",
+    "display": "standalone",
+    "orientation": "portrait",
+    "scope": "/",
+    "theme_color": "#049dd9",
+    "shortcuts": [
+    ]
+}
