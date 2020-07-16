@@ -14,12 +14,11 @@ if (window.DeviceOrientationEvent) {
 }
 
 function deviceOrientationListener(event) {
-    // console.log(`alpha: ${event.alpha}`);
-    // console.log(`beta: ${event.beta}`);
-    // console.log(`gamma: ${event.gamma}`);
     orientation.alpha = event.alpha;
     orientation.beta = event.beta;
     orientation.gamma = event.gamma;
     console.log(`Device Orientation`);
-    console.log(orientation);
+    console.log(`alpha: ${orientation.alpha}`);
+    console.log(`beta: ${orientation.beta}`);
+    console.log(`gamma: ${orientation.gamma}`);
 }
