@@ -22,4 +22,4 @@ app.use(cors());
 
 app.use(routes); //Habilitando o uso de rotas
 
-app.listen(port, () => console.log(`Servidor on-line na porta: ${port}`));
+app.listen(process.env.PORT || port, () => console.log(`Servidor on-line na porta: ${port}`));
