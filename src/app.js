@@ -2,9 +2,8 @@ var express = require('express');
 var path = require('path');
 const routes = require('./routes.js')
 const cors = require('cors')
-const nunjucks = require('nunjucks');  //Importando nunjucks para usar template engine
-const https = require('https');
-const fs = require('fs');
+// const nunjucks = require('nunjucks');  //Importando nunjucks para usar template engine
+// const fs = require('fs');
 
 var port = 3330;
 
