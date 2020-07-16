@@ -1,4 +1,10 @@
-// var panorama = document.getElementById('panorama'); /* This is your div */
-
-// panorama.scrollTop = (panorama.scrollHeight - panorama.clientHeight) / 2;
-// panorama.scrollLeft = (panorama.scrollWidth - panorama.clientWidth) / 2;
+function initSensor() {
+    sensor = new AbsoluteOrientationSensor({frequency: 60});
+    sensor.onreading = () => model.quaternion.fromArray(sensor.quaternion);
+    sensor.onerror = event => {
+        if (event.error.name == 'NotReadableError') {
+            console.log("Sensor is not available.");
+        }
+    }
+    sensor.start();
+}
