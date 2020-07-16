@@ -1,7 +1,7 @@
 const photo3d = document.getElementById("photo3d")
-const alphaValue = document.getElementById("alpha").innerText;
-const betaValue = document.getElementById("beta").innerText;
-const gammaValue = document.getElementById("gamma").innerText;
+const alphaValue = document.getElementById("alpha");
+const betaValue = document.getElementById("beta");
+const gammaValue = document.getElementById("gamma");
 var photoPos = {
     x:  1500, 
     y:  750
@@ -20,7 +20,7 @@ function deviceOrientationListener(event) {
     console.log(`alpha: ${event.alpha}`);
     console.log(`beta: ${event.beta}`);
     console.log(`gamma: ${event.gamma}`);
-    alphaValue = event.alpha;
-    betaValue = event.beta;
-    gammaValue = event.gamma;    
+    alphaValue.innerText = event.alpha;
+    betaValue.innerText = event.beta;
+    gammaValue.innerText = event.gamma;    
 }
