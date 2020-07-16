@@ -1,9 +1,5 @@
 const photo3d = document.getElementById("photo3d")
-var orientation = {
-    "alpha": 0,
-    "beta": 90,
-    "gamma": -90
-};
+var orientation = JSON.parse('{"alpha": 0, "beta": 90, "gamma": -90}');
 
 if (window.DeviceOrientationEvent) {
     // Our browser supports DeviceOrientation
