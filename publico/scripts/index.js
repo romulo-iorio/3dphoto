@@ -1,4 +1,9 @@
 const photo3d = document.getElementById("photo3d")
+var orientation = {
+    "alpha": 0,
+    "beta": 90,
+    "gamma": -90
+}
 
 if (window.DeviceOrientationEvent) {
     // Our browser supports DeviceOrientation
@@ -9,7 +14,11 @@ if (window.DeviceOrientationEvent) {
 }
 
 function deviceOrientationListener(event) {
-    console.log(event.alpha);
-    console.log(event.beta);
-    console.log(event.gamma);
+    // console.log(`alpha: ${event.alpha}`);
+    // console.log(`beta: ${event.beta}`);
+    // console.log(`gamma: ${event.gamma}`);
+    orientation.alpha = event.alpha;
+    orientation.beta = event.beta;
+    orientation.gamma = event.gamma;
+    console.log(`Device Orientation: ${orientation}`)
 }
