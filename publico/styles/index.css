@@ -23,12 +23,12 @@
 #teste {
     display: flex;
     font-size: 20px;
-    margin: 10px;
 }
 
 #teste h1,
 #teste h2 {
     font-size: 20px;
+    margin: 10px;
 }
 
 /*#teste {
