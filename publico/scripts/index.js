@@ -7,6 +7,10 @@ var photoPos = {
     x:  1500,       //alpha
     y:  750         //gamma
 };
+
+photo3d.style.right = photoPos.x;
+photo3d.style.bottom = photoPos.y;
+
 var contIni = 0;
 var alphaIni = 0;
 var betaIni = 0;
@@ -39,7 +43,7 @@ function deviceOrientationListener(event) {
         photoPos.y += (Math.round(event.gamma) - gammaIni);
         console.log(`photoPos.x: ${photoPos.x}`);
         console.log(`photoPos.y: ${photoPos.y}`);
-        document.getElementById("photo3d").style.right = photoPos.x;
-        document.getElementById("photo3d").style.bottom = photoPos.y; 
+        photo3d.style.right = photoPos.x;
+        photo3d.style.bottom = photoPos.y; 
     }
 }
