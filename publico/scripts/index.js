@@ -1,7 +1,8 @@
 const photo = document.getElementById("photo");
 const alphaValue = document.getElementById("alpha");
-const betaValue = document.getElementById("beta");
-const gammaValue = document.getElementById("gamma");
+const alphaDiff = document.getElementById("alpha-diff");
+// const betaValue = document.getElementById("beta");
+// const gammaValue = document.getElementById("gamma");
 
 var photoPos = {
     x:  4500,       //alpha
@@ -25,10 +26,12 @@ if (window.DeviceOrientationEvent) {
 
 function deviceOrientationListener(event) {
     // console.log(`Device Orientation`);
-    // console.log(`alpha: ${Math.round(event.alpha)}`);
+    console.log(`alpha: ${Math.round(event.alpha)}`);
+    console.log(`alphadiff: ${alphaOld - Math.round(event.alpha)}`);
     // console.log(`beta: ${Math.round(event.beta)}`);
     // console.log(`gamma: ${Math.round(event.gamma)}`);
-    // alphaValue.innerText = Math.round(event.alpha);
+    alphaValue.innerText = Math.round(event.alpha);
+    alphaDiff.innerText = Math.round(alphaOld - Math.round(event.alpha));
     // betaValue.innerText = Math.round(event.beta);
     // gammaValue.innerText = Math.round(event.gamma);
     // console.log(contIni);
