@@ -69,5 +69,5 @@ function deviceOrientationListener(event) {
 photo.addEventListener("click", showDebug);
 
 function showDebug(){
-    debug.classList.toogle("hidden");
+    debug.classList.toggle("hidden");
 }

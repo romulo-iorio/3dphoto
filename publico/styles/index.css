@@ -38,5 +38,5 @@
 }
 
 .hidden {
-    display: none; /*ativar display para debug dos sensores*/    
+    visibility: hidden; /*ativar display para debug dos sensores*/    
 }
