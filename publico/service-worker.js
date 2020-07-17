@@ -8,12 +8,12 @@ const preCacheUrls = [
     './views/index.html',
     // css file
     './styles/index.css',
-    // javascript filter
-    './scripts/index.js',
+    // javascript file
+    //'./scripts/index.js',
     // manifest file
     './../manifest.json',
     // assets
-    //'./img/',
+    './img/composed-panorama.png',
     // maps api
     //'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/js?key=AIzaSyB2twdyhbY-Am2MgyGkWBpHZnTktlw8PJs&callback=initMap',
 ];
