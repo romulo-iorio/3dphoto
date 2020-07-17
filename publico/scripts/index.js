@@ -19,7 +19,7 @@ var gammaIni = 0;
 if (window.DeviceOrientationEvent) {
     // Our browser supports DeviceOrientation
     console.log("Your browser support Device Orientation and is running this sensor");
-    window.addEventListener("deviceorientation", setTimeout(deviceOrientationListener,100));
+    window.addEventListener("deviceorientation", setTimeout(() => {deviceOrientationListener},100));
 } else {
     console.log("Sorry, your browser doesn't support Device Orientation");
 }
