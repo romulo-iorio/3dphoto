@@ -30,3 +30,7 @@
 #teste h2 {
     font-size: 20px;
 }
+
+#teste {
+    display: none; /*ativar display para debug dos sensores*/    
+}

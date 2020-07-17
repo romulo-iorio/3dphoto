@@ -22,9 +22,9 @@ if (window.DeviceOrientationEvent) {
 
 function deviceOrientationListener(event) {
     console.log(`Device Orientation`);
-    console.log(`alpha: ${event.alpha}`);
-    console.log(`beta: ${event.beta}`);
-    console.log(`gamma: ${event.gamma}`);
+    console.log(`alpha: ${Math.round(event.alpha)}`);
+    console.log(`beta: ${Math.round(event.beta)}`);
+    console.log(`gamma: ${Math.round(event.gamma)}`);
     alphaValue.innerText = Math.round(event.alpha);
     betaValue.innerText = Math.round(event.beta);
     gammaValue.innerText = Math.round(event.gamma);
@@ -36,7 +36,9 @@ function deviceOrientationListener(event) {
         contIni = 1;
     }else{
         photoPos.x += (Math.round(event.alpha) - alphaIni);
-        photoPos.y += (Math.round(event.gamma) - gammaIni);     
+        photoPos.y += (Math.round(event.gamma) - gammaIni);
+        console.log(`photoPos.x: ${photoPos.x}`);
+        console.log(`photoPos.y: ${photoPos.y}`);
         photo3d.style.right = photoPos.x;
         photo3d.style.bottom = photoPos.y; 
     }
