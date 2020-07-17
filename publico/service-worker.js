@@ -13,9 +13,7 @@ const preCacheUrls = [
     // manifest file
     './../manifest.json',
     // assets
-    './img/composed-panorama.png',
-    // maps api
-    //'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/js?key=AIzaSyB2twdyhbY-Am2MgyGkWBpHZnTktlw8PJs&callback=initMap',
+    './img/composed-panorama.png'
 ];
 
 self.addEventListener('install', event => {
