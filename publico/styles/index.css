@@ -24,7 +24,8 @@
     display: flex;
     font-size: 20px;
     position: absolute;
-    bottom: 0px;
+    top: 0px;
+    right: 0px;
     color: white;
     background-color: rgba(0,0,0,0.5);
     border-radius: 5px;
