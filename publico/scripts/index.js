@@ -40,17 +40,17 @@ function deviceOrientationListener(event) {
         gammaIni = Math.round(event.gamma);
         contIni = 1;
     }else{
-        photoPos.x -= (alphaIni - Math.round(event.alpha))*3000/360;
-        photoPos.y -= (gammaIni - Math.round(event.gamma))*1500/360;
+        photoPos.x += (alphaIni - Math.round(event.alpha))*3000/360;
+        photoPos.y += (gammaIni - Math.round(event.gamma))*1500/360;
         if(photoPos.x > 3000) {
             photoPos.x -= 3000;
         }else if(photoPos.x < 0){
             photoPos.x += 3000;
         }
         if(photoPos.y > 1500) {
-            photoPos.x -= 1500;
+            photoPos.y -= 1500;
         }else if(photoPos.y < 0){
-            photoPos.x += 1500;
+            photoPos.y += 1500;
         }
         console.log(`photoPos.x: ${photoPos.x}`);
         console.log(`photoPos.y: ${photoPos.y}`);
