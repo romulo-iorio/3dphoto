@@ -9,8 +9,8 @@ var photoPos = {
 };
 
 console.log("aqui");
-photo.style.right = photoPos.x;
-photo.style.bottom = photoPos.y;
+photo.style.right   = `${photoPos.x}px`;
+photo.style.bottom  = `${photoPos.y}px`;
 
 var contIni = 0;
 var alphaIni = 0;
@@ -44,7 +44,7 @@ function deviceOrientationListener(event) {
         photoPos.y += (Math.round(event.gamma) - gammaIni);
         console.log(`photoPos.x: ${photoPos.x}`);
         console.log(`photoPos.y: ${photoPos.y}`);
-        photo.style.right = photoPos.x;
-        photo.style.bottom = photoPos.y; 
+        photo.style.right   = `${photoPos.x}px`;
+        photo.style.bottom  = `${photoPos.y}px`;
     }
 }
