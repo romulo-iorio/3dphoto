@@ -1,4 +1,4 @@
-const photo3d = document.getElementById("photo3d");
+const photo = document.getElementById("photo");
 const alphaValue = document.getElementById("alpha");
 const betaValue = document.getElementById("beta");
 const gammaValue = document.getElementById("gamma");
@@ -9,8 +9,8 @@ var photoPos = {
 };
 
 console.log("aqui");
-photo3d.style.right = photoPos.x;
-photo3d.style.bottom = photoPos.y;
+photo.style.right = photoPos.x;
+photo.style.bottom = photoPos.y;
 
 var contIni = 0;
 var alphaIni = 0;
@@ -44,7 +44,7 @@ function deviceOrientationListener(event) {
         photoPos.y += (Math.round(event.gamma) - gammaIni);
         console.log(`photoPos.x: ${photoPos.x}`);
         console.log(`photoPos.y: ${photoPos.y}`);
-        photo3d.style.right = photoPos.x;
-        photo3d.style.bottom = photoPos.y; 
+        photo.style.right = photoPos.x;
+        photo.style.bottom = photoPos.y; 
     }
 }
