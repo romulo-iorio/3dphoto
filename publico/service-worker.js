@@ -13,7 +13,7 @@ const preCacheUrls = [
     // manifest file
     './../manifest.json',
     // assets
-    './img/composed-panorama.png'
+    './img/composed-panorama.png',
 ];
 
 self.addEventListener('install', event => {
