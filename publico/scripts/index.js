@@ -40,8 +40,8 @@ function deviceOrientationListener(event) {
         gammaOld = Math.round(event.gamma);
         contIni = 1;
     }else{
-        if((alphaOld - Math.round(event.alpha) < 100){
-            photoPos.x += Math.round((alphaOld - Math.round(event.alpha))*3000/360);
+        if((alphaOld - Math.round(event.alpha)) < 100){
+            photoPos.x += Math.round((alphaOld - Math.round(event.alpha))*3000/360);89
         }
         // if(photoPos.x >= 7500) {
         //     photoPos.x -= 3000;
