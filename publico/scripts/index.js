@@ -50,7 +50,7 @@ function deviceOrientationListener(event) {
             photoPos.y += 1500;
         }
         console.log(`photoPos.x: ${photoPos.x}px`);
-        console.log(`photoPos.y: ${photoPos.y}px`);
+        //console.log(`photoPos.y: ${photoPos.y}px\n`);
         // photo.style.right   = `${photoPos.x}px`;
         // photo.style.bottom  = `${photoPos.y}px`;
         alphaOld = Math.round(event.alpha);
