@@ -4,7 +4,7 @@ const betaValue = document.getElementById("beta");
 const gammaValue = document.getElementById("gamma");
 
 var photoPos = {
-    x:  1500,       //alpha
+    x:  4500,       //alpha
     y:  750         //gamma
 };
 
@@ -37,11 +37,11 @@ function deviceOrientationListener(event) {
         gammaOld = Math.round(event.gamma);
         contIni = 1;
     }else{
-        photoPos.x += (alphaOld - Math.round(event.alpha))*3000*2/360;
-        photoPos.y -= (gammaOld - Math.round(event.gamma))*1500*2/360;
-        if(photoPos.x > 3000) {
+        photoPos.x += (alphaOld - Math.round(event.alpha))*3000/360;
+        photoPos.y -= (gammaOld - Math.round(event.gamma))*1500/360;
+        if(photoPos.x > 7500) {
             photoPos.x -= 3000;
-        }else if(photoPos.x < 0){
+        }else if(photoPos.x < 1500){
             photoPos.x += 3000;
         }
         if(photoPos.y > 1500) {
