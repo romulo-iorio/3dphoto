@@ -8,6 +8,7 @@ var photoPos = {
     y:  750         //gamma
 };
 
+console.log("aqui");
 photo3d.style.right = photoPos.x;
 photo3d.style.bottom = photoPos.y;
 
