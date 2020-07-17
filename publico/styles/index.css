@@ -20,7 +20,7 @@
     right:  1500px;*/
 }
 
-#teste {
+#debug {
     display: flex;
     font-size: 20px;
     position: absolute;
@@ -31,12 +31,12 @@
     border-radius: 5px;
 }
 
-#teste h1,
-#teste h2 {
+#debug h1,
+#debug h2 {
     font-size: 20px;
     margin: 5px 10px;
 }
 
-/*#teste {
+.hidden {
     display: none; /*ativar display para debug dos sensores*/    
-/*}*/
+}

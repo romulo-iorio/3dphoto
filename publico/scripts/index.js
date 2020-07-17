@@ -2,6 +2,7 @@ const photo = document.getElementById("photo");
 const alphaValue = document.getElementById("alpha");
 const alphaDiff = document.getElementById("alpha-diff");
 const xPos = document.getElementById("x-pos");
+const debug = document.getElementById("debug");
 // const betaValue = document.getElementById("beta");
 // const gammaValue = document.getElementById("gamma");
 
@@ -63,4 +64,10 @@ function deviceOrientationListener(event) {
         alphaOld = Math.round(event.alpha);
         gammaOld = Math.round(event.gamma);
     }
+}
+
+photo.addEventListener("click", showDebug);
+
+function showDebug(){
+    debug.classList.toogle("hidden");
 }
