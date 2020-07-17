@@ -29,10 +29,10 @@ if (window.DeviceOrientationEvent) {
 }
 
 function deviceOrientationListener(event) {
-    // console.log(`Device Orientation`);
-    // console.log(`alpha: ${Math.round(event.alpha)}`);
-    // console.log(`beta: ${Math.round(event.beta)}`);
-    // console.log(`gamma: ${Math.round(event.gamma)}`);
+    console.log(`Device Orientation`);
+    console.log(`alpha: ${Math.round(event.alpha)}`);
+    console.log(`beta: ${Math.round(event.beta)}`);
+    console.log(`gamma: ${Math.round(event.gamma)}`);
     // alphaValue.innerText = Math.round(event.alpha);
     // betaValue.innerText = Math.round(event.beta);
     // gammaValue.innerText = Math.round(event.gamma);
