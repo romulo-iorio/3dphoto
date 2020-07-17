@@ -19,20 +19,16 @@ var gammaIni = 0;
 if (window.DeviceOrientationEvent) {
     // Our browser supports DeviceOrientation
     console.log("Your browser support Device Orientation and is running this sensor");
-    window.addEventListener("deviceorientation", () => {
-        setTimeout(() => {
-            deviceOrientationListener
-        },100)
-    });
+    window.addEventListener("deviceorientation", deviceOrientationListener);
 } else {
     console.log("Sorry, your browser doesn't support Device Orientation");
 }
 
 function deviceOrientationListener(event) {
-    console.log(`Device Orientation`);
-    console.log(`alpha: ${Math.round(event.alpha)}`);
-    console.log(`beta: ${Math.round(event.beta)}`);
-    console.log(`gamma: ${Math.round(event.gamma)}`);
+    // console.log(`Device Orientation`);
+    // console.log(`alpha: ${Math.round(event.alpha)}`);
+    // console.log(`beta: ${Math.round(event.beta)}`);
+    // console.log(`gamma: ${Math.round(event.gamma)}`);
     // alphaValue.innerText = Math.round(event.alpha);
     // betaValue.innerText = Math.round(event.beta);
     // gammaValue.innerText = Math.round(event.gamma);
