@@ -12,9 +12,8 @@ photo.style.right   = `${photoPos.x}px`;
 photo.style.bottom  = `${photoPos.y}px`;
 
 var contIni = 0;
-var alphaIni = 0;
-var betaIni = 0;
-var gammaIni = 0;
+var alphaOld = 0;
+var gammaOld = 0;
 
 if (window.DeviceOrientationEvent) {
     // Our browser supports DeviceOrientation
@@ -34,13 +33,12 @@ function deviceOrientationListener(event) {
     // gammaValue.innerText = Math.round(event.gamma);
     // console.log(contIni);
     if(!contIni){
-        alphaIni = Math.round(event.alpha);
-        betaIni  = Math.round(event.beta);
-        gammaIni = Math.round(event.gamma);
+        alphaOld = Math.round(event.alpha);
+        gammaOld = Math.round(event.gamma);
         contIni = 1;
     }else{
-        photoPos.x += (alphaIni - Math.round(event.alpha))*3000*2/360;
-        photoPos.y -= (gammaIni - Math.round(event.gamma))*1500*2/360;
+        photoPos.x += (alphaOld - Math.round(event.alpha))*3000*2/360;
+        photoPos.y -= (gammaOld - Math.round(event.gamma))*1500*2/360;
         if(photoPos.x > 3000) {
             photoPos.x -= 3000;
         }else if(photoPos.x < 0){
@@ -55,5 +53,7 @@ function deviceOrientationListener(event) {
         console.log(`photoPos.y: ${photoPos.y}`);
         photo.style.right   = `${photoPos.x}px`;
         photo.style.bottom  = `${photoPos.y}px`;
+        alphaOld = Math.round(event.alpha);
+        gammaOld = Math.round(event.gamma);
     }
 }
