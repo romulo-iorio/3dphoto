@@ -28,7 +28,7 @@ function deviceOrientationListener(event) {
     alphaValue.innerText = Math.round(event.alpha);
     betaValue.innerText = Math.round(event.beta);
     gammaValue.innerText = Math.round(event.gamma);
-
+    console.log(contIni);
     if(!contIni){
         alphaIni = Math.round(event.alpha);
         betaIni  = Math.round(event.beta);
