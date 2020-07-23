@@ -9,7 +9,7 @@ const debug = document.getElementById("debug");
 
 var photoPos = {
     x:  4500,       //alpha
-    y:  750         //gamma
+    y:  2250        //gamma
 };
 
 photo.style.right   = `${photoPos.x}px`;
