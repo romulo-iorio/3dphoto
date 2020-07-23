@@ -1,6 +1,6 @@
 const photo = document.getElementById("photo");
-const alphaValue = document.getElementById("alpha");
-const alphaDiff = document.getElementById("alpha-diff");
+const gammaValue = document.getElementById("gamma");
+const gammaDiff = document.getElementById("gamma-diff");
 const xPos = document.getElementById("x-pos");
 const yPos = document.getElementById("y-pos");
 const debug = document.getElementById("debug");
@@ -34,8 +34,8 @@ function deviceOrientationListener(event) {
     // betaValue.innerText = Math.round(event.beta);
     // gammaValue.innerText = Math.round(event.gamma);
     // console.log(contIni);
-    alphaValue.innerText = Math.round(event.alpha);
-    alphaDiff.innerText = Math.round(alphaOld - Math.round(event.alpha));
+    gammaValue.innerText = Math.round(event.gamma);
+    gammaDiff.innerText = Math.round(gammaOld - Math.round(event.gamma));
     xPos.innerText  =   photoPos.x;
     yPos.innerText  =   photoPos.y;
     if(!contIni){
@@ -51,7 +51,7 @@ function deviceOrientationListener(event) {
         }else if(photoPos.x <= 1500){
             photoPos.x += 3000;
         }
-        if((gammaOld - Math.round(event.gamma) < 50) && (gammaOld - Math.round(event.gamma)) > -50){
+        if((gammaOld - Math.round(event.gamma) < 50) && ((gammaOld - Math.round(event.gamma)) > -50)){
             photoPos.y -= Math.round((gammaOld - Math.round(event.gamma)))*1500/360;
         }
         // if(photoPos.y > 1500) {/
