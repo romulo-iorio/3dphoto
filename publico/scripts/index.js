@@ -51,7 +51,7 @@ function deviceOrientationListener(event) {
         }else if(photoPos.x <= 1500){
             photoPos.x += 3000;
         }
-        if((gammaOld - Math.round(event.gamma) < 100) && (gammaOld - Math.round(event.gamma)) > -100){
+        if((gammaOld - Math.round(event.gamma) < 50) && (gammaOld - Math.round(event.gamma)) > -50){
             photoPos.y -= Math.round((gammaOld - Math.round(event.gamma)))*1500/360;
         }
         // if(photoPos.y > 1500) {
