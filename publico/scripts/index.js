@@ -52,11 +52,11 @@ function deviceOrientationListener(event) {
             photoPos.x += 3000;
         }
         photoPos.y -= (gammaOld - Math.round(event.gamma))*1500/360;
-        if(photoPos.y > 1500) {
-            photoPos.y -= 1500;
-        }else if(photoPos.y < 0){
-            photoPos.y += 1500;
-        }
+        // if(photoPos.y > 1500) {
+        //     photoPos.y -= 1500;
+        // }else if(photoPos.y < 0){
+        //     photoPos.y += 1500;
+        // }
         console.log(`photoPos.x: ${photoPos.x}px`);
         console.log(`alpha: ${Math.round(event.alpha)}`);
         console.log(`alphadiff: ${alphaOld - Math.round(event.alpha)}`);
