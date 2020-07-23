@@ -2,6 +2,7 @@ const photo = document.getElementById("photo");
 const alphaValue = document.getElementById("alpha");
 const alphaDiff = document.getElementById("alpha-diff");
 const xPos = document.getElementById("x-pos");
+const yPos = document.getElementById("y-pos");
 const debug = document.getElementById("debug");
 // const betaValue = document.getElementById("beta");
 // const gammaValue = document.getElementById("gamma");
@@ -35,7 +36,8 @@ function deviceOrientationListener(event) {
     // console.log(contIni);
     alphaValue.innerText = Math.round(event.alpha);
     alphaDiff.innerText = Math.round(alphaOld - Math.round(event.alpha));
-    xPos.innerText = photoPos.x;
+    xPos.innerText  =   photoPos.x;
+    yPos.innerText  =   photoPos.y;
     if(!contIni){
         alphaOld = Math.round(event.alpha);
         gammaOld = Math.round(event.gamma);
@@ -49,18 +51,18 @@ function deviceOrientationListener(event) {
         }else if(photoPos.x <= 1500){
             photoPos.x += 3000;
         }
-        // photoPos.y -= (gammaOld - Math.round(event.gamma))*1500/360;
-        // if(photoPos.y > 1500) {
-        //     photoPos.y -= 1500;
-        // }else if(photoPos.y < 0){
-        //     photoPos.y += 1500;
-        // }
+        photoPos.y -= (gammaOld - Math.round(event.gamma))*1500/360;
+        if(photoPos.y > 1500) {
+            photoPos.y -= 1500;
+        }else if(photoPos.y < 0){
+            photoPos.y += 1500;
+        }
         console.log(`photoPos.x: ${photoPos.x}px`);
-        // console.log(`alpha: ${Math.round(event.alpha)}`);
-        // console.log(`alphadiff: ${alphaOld - Math.round(event.alpha)}`);
-        //console.log(`photoPos.y: ${photoPos.y}px\n`);
+        console.log(`alpha: ${Math.round(event.alpha)}`);
+        console.log(`alphadiff: ${alphaOld - Math.round(event.alpha)}`);
+        console.log(`photoPos.y: ${photoPos.y}px\n`);
         photo.style.right   = `${photoPos.x}px`;
-        // photo.style.bottom  = `${photoPos.y}px`;
+        photo.style.bottom  = `${photoPos.y}px`;
         alphaOld = Math.round(event.alpha);
         gammaOld = Math.round(event.gamma);
     }
