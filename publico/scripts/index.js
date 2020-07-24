@@ -8,8 +8,8 @@ const debug = document.getElementById("debug");
 // const gammaValue = document.getElementById("gamma");
 
 var photoPos = {
-    x:  4500,       //alpha
-    y:  2250        //gamma
+    x:  4180,       //alpha 4500
+    y:  2070        //gamma 2250
 };
 
 photo.style.right   = `${photoPos.x}px`;
@@ -46,9 +46,9 @@ function deviceOrientationListener(event) {
         if(((alphaOld - Math.round(event.alpha)) < 100) && ((alphaOld - Math.round(event.alpha)) > -100)){
             photoPos.x += Math.round((alphaOld - Math.round(event.alpha))*3000/360);
         }
-        if(photoPos.x >= 7500) {
+        if(photoPos.x >= 7180) { //7500
             photoPos.x -= 3000;
-        }else if(photoPos.x <= 1500){
+        }else if(photoPos.x <= 1180){ //1500
             photoPos.x += 3000;
         }
         if((gammaOld - Math.round(event.gamma) < 50) && ((gammaOld - Math.round(event.gamma)) > -50)){
