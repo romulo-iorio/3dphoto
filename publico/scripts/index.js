@@ -52,7 +52,7 @@ function deviceOrientationListener(event) {
             photoPos.x += 3000;
         }
         if((gammaOld - Math.round(event.gamma) < 50) && ((gammaOld - Math.round(event.gamma)) > -50)){
-            photoPos.y -= Math.round((gammaOld - Math.round(event.gamma)))*1500/180;
+            photoPos.y -= Math.round((gammaOld - Math.round(event.gamma))*1500/270);
         }
         // if(photoPos.y > 1500) {/
         //     photoPos.y -= 1500;
